@@ -1,40 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { Layout } from 'antd';
-
-import Dashboard from './components/Dashnoard';
-import UserList from './components/UserList';
-import SideMenu from './components/SideMenu';
-import BreadcrumbMe from './components/BreadcrumbMe';
-
-const { Header, Content, Footer } = Layout;
+import Admin from './Admin';
+import Login from './components/Login';
 
 const App = () => {
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
-        <SideMenu />
-        <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }} />
-          <Switch>
-            <Content style={{ margin: '0 16px' }}>
-              <BreadcrumbMe />
-              <div
-                className="site-layout-background"
-                style={{ padding: 24, minHeight: 360, margin: '16px 0' }}
-              >
-                <Route exact path="/" component={Dashboard} />
-                <Route path="/userlist" component={UserList} />
-              </div>
-            </Content>
-          </Switch>
-          <Footer style={{ textAlign: 'center' }}>
-            React Admin Template with Ant Design © cihatata
-          </Footer>
-        </Layout>
-      </Layout>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Admin} />
+      </Switch>
+      {/* {!isLogin ? <Login /> : <Admin />} */}
     </Router>
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isLogin: state.isLogin,
+  };
+};
+
+export default connect(mapStateToProps)(App);

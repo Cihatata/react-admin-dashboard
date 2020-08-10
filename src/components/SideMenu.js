@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { connect } from 'react-redux';
 import { Layout, Menu } from 'antd';
 import {
   DesktopOutlined,
@@ -8,11 +8,16 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 
+import { control } from '../actions';
+
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-const SideMenu = () => {
+const SideMenu = ({ testFunc }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const test = () => {
+    testFunc({ ip: '22.22.22.22' });
+  };
 
   return (
     <Sider collapsible collapsed={collapsed} onCollapse={setCollapsed}>
@@ -22,16 +27,22 @@ const SideMenu = () => {
           <Link to="/">Dashboard</Link>
         </Menu.Item>
         <Menu.Item key="2" icon={<UserOutlined />}>
-          <Link to="/userlist">User List</Link>
+          <Link to="/userlist">UserList</Link>
         </Menu.Item>
-        <SubMenu key="sub1" icon={<DesktopOutlined />} title="User">
-          <Menu.Item key="3">Tom</Menu.Item>
-          <Menu.Item key="4">Bill</Menu.Item>
-          <Menu.Item key="5">Alex</Menu.Item>
+        <SubMenu key="sub1" icon={<DesktopOutlined />} title="Logs">
+          <Menu.Item onClick={test} key="3">
+            Auth Log
+          </Menu.Item>
+          <Menu.Item key="5">Error Log</Menu.Item>
         </SubMenu>
       </Menu>
     </Sider>
   );
 };
 
-export default SideMenu;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    testFunc: ({ ip }) => dispatch(control({ ip })),
+  };
+};
+export default connect(null, mapDispatchToProps)(SideMenu);
