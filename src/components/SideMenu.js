@@ -24,16 +24,18 @@ const SideMenu = ({ testFunc }) => {
       <div className="logo"> LOGO </div>
       <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
         <Menu.Item key="1" icon={<PieChartOutlined />}>
-          <Link to="/">Dashboard</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </Menu.Item>
         <Menu.Item key="2" icon={<UserOutlined />}>
           <Link to="/userlist">UserList</Link>
         </Menu.Item>
         <SubMenu key="sub1" icon={<DesktopOutlined />} title="Logs">
           <Menu.Item onClick={test} key="3">
-            Auth Log
+            <Link to="/logs/authlog">Auth Log</Link>
           </Menu.Item>
-          <Menu.Item key="5">Error Log</Menu.Item>
+          <Menu.Item key="5">
+            <Link to="/logs/errorlog">Error Log</Link>
+          </Menu.Item>
         </SubMenu>
       </Menu>
     </Sider>

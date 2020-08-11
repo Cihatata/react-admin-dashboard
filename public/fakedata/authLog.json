@@ -1,0 +1,20 @@
+[
+    "Aug 10 14:12:36 cihat systemd-logind[1020]: Operation 'sleep' finished.",
+    "Aug 10 14:12:44 cihat gdm-password]: gkr-pam: unlocked login keyring",
+    "Aug 10 14:17:01 cihat CRON[14061]: pam_unix(cron:session): session opened for user root by (uid=0)",
+    "Aug 10 15:02:09 cihat pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)",
+    "Aug 10 15:04:01 cihat CRON[15086]: pam_unix(cron:session): session opened for user root by (uid=0)",
+    "Aug 10 15:08:40 cihat gdm-password]: gkr-pam: unlocked login keyring",
+    "Aug 10 16:04:40 cihat pkexec[17907]: cihat: Executing command [USER=root] [TTY=unknown] [CWD=/home/cihat] [COMMAND=/usr/lib/gnome-settings-daemon/gsd-backlight-helper --set-brightness 4098]",
+    "Aug 10 16:05:53 cihat polkitd(authority=local): Unregistered Authentication Agent for unix-session:2 (system bus name :1.78, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)",
+    "Aug 10 16:05:53 cihat systemd-logind[1020]: System is powering down.",
+    "Aug 10 14:12:36 cihat systemd-logind[1020]: Operation 'sleep' finished.",
+    "Aug 10 14:12:44 cihat gdm-password]: gkr-pam: unlocked login keyring",
+    "Aug 10 14:17:01 cihat CRON[14061]: pam_unix(cron:session): session opened for user root by (uid=0)",
+    "Aug 10 15:02:09 cihat pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)",
+    "Aug 10 15:04:01 cihat CRON[15086]: pam_unix(cron:session): session opened for user root by (uid=0)",
+    "Aug 10 15:08:40 cihat gdm-password]: gkr-pam: unlocked login keyring",
+    "Aug 10 16:04:40 cihat pkexec[17907]: cihat: Executing command [USER=root] [TTY=unknown] [CWD=/home/cihat] [COMMAND=/usr/lib/gnome-settings-daemon/gsd-backlight-helper --set-brightness 4098]",
+    "Aug 10 16:05:53 cihat polkitd(authority=local): Unregistered Authentication Agent for unix-session:2 (system bus name :1.78, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)",
+    "Aug 10 16:05:53 cihat systemd-logind[1020]: System is powering down."
+]

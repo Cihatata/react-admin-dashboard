@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
 
-// import Dashboard from './components/Dashnoard';
+import Dashboard from './components/Dashnoard';
 import UserList from './components/UserList';
 import SideMenu from './components/SideMenu';
 import BreadcrumbMe from './components/BreadcrumbMe';
 import HeaderMe from './components/HeaderMe';
+import ErrorLog from './components/ErrorLog';
+import AuthLog from './components/AuthLog';
 
 const { Header, Content, Footer } = Layout;
 
@@ -15,7 +17,7 @@ const Admin = (props) => {
   const { isLogin } = props;
   useEffect(() => {
     if (isLogin) {
-      console.log('Admin sayfasinda kal');
+
     } else {
       console.log('Logine yonlendir');
       props.history.push('/login');
@@ -34,12 +36,11 @@ const Admin = (props) => {
         <Switch>
           <Content style={{ margin: '0 16px' }}>
             <BreadcrumbMe />
-            <div
-              className="site-layout-background"
-              style={{ padding: 24, minHeight: 360, margin: '16px 0' }}
-            >
-              {/* <Route exact path="/" component={Dashboard} /> */}
+            <div style={{ padding: 24, minHeight: 560, margin: '16px 0' }}>
+              <Route exact path="/dashboard" component={Dashboard} />
               <Route path="/userlist" component={UserList} />
+              <Route path="/logs/errorlog" component={ErrorLog} />
+              <Route path="/logs/authlog" component={AuthLog} />
             </div>
           </Content>
         </Switch>
