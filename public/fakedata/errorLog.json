@@ -1,0 +1,17 @@
+[
+    "2020-08-09 06:51:50 status installed grub-efi-amd64-bin:amd64 2.02-2ubuntu8.17",
+    "2020-08-09 06:51:50 configure grub-pc-bin:amd64 2.02-2ubuntu8.17 <none>",
+    "2020-08-09 06:51:50 status unpacked grub-pc-bin:amd64 2.02-2ubuntu8.17",
+    "2020-08-09 06:51:50 status half-configured grub2-common:amd64 2.02-2ubuntu8.17",
+    "2020-08-09 06:51:53 status half-configured grub-efi-amd64-signed:amd64 1.93.19+2.02-2ubuntu8.17",
+    "2020-08-09 06:51:47 status triggers-pending install-info:amd64 6.5.0.dfsg.1-2",
+    "2020-08-09 06:51:42 upgrade binutils-x86-64-linux-gnu:amd64 2.30-21ubuntu1~18.04.3 2.30-21ubuntu1~18.04.4",
+    "2020-08-09 06:51:50 status installed grub-efi-amd64-bin:amd64 2.02-2ubuntu8.17",
+    "2020-08-09 06:51:50 configure grub-pc-bin:amd64 2.02-2ubuntu8.17 <none>",
+    "2020-08-09 06:51:50 status unpacked grub-pc-bin:amd64 2.02-2ubuntu8.17",
+    "2020-08-09 06:51:50 status half-configured grub2-common:amd64 2.02-2ubuntu8.17",
+    "2020-08-09 06:51:53 status half-configured grub-efi-amd64-signed:amd64 1.93.19+2.02-2ubuntu8.17",
+    "2020-08-09 06:51:47 status triggers-pending install-info:amd64 6.5.0.dfsg.1-2",
+    "2020-08-09 06:51:42 upgrade binutils-x86-64-linux-gnu:amd64 2.30-21ubuntu1~18.04.3 2.30-21ubuntu1~18.04.4",
+    "ERROR LOG TEST"
+]

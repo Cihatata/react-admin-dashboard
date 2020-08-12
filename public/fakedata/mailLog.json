@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Apr.",
+      "blocked":658 ,
+      "allowed": 3400
+    },
+    {
+      "name": "May.",
+      "blocked": 100,
+      "allowed": 3788
+    },
+    {
+      "name": "Jun.",
+      "blocked": 255,
+      "allowed": 2788
+    },
+    {
+      "name": "July",
+      "blocked": 333,
+      "allowed": 2111
+    },
+    {
+      "name": "Aug.",
+      "blocked": 1000,
+      "allowed": 9800
+    }
+  ]

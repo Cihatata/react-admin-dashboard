@@ -1,4 +1,5 @@
 @import 'color.css';
+@import 'sysinfo.css';
 
 .test {
     color: var(--header-color);
