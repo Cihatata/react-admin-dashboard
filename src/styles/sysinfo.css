@@ -1,4 +1,19 @@
 .demo-card {
     height: 140px;
     padding: 32px;
+    font-size:32px;
+    font-weight:500;
+}
+.demo-card-bottom {
+    height: 200px;
+    padding: 32px;
+}
+
+.chartjs-card {
+    flex-direction: column;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }

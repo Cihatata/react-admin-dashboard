@@ -11,7 +11,7 @@ const HeaderMe = (props) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="http://www.alipay.com/"
+          href="http://localhost:3000/dashboard"
         >
           User Info
         </a>

@@ -5,6 +5,8 @@ const INITIAL_STATE = {
   sysInfo: {},
   errMessage: '',
   authLog: [],
+  requestCount: [],
+  mailLog: [],
 };
 
 const reducer = (store = INITIAL_STATE, action) => {
@@ -30,6 +32,14 @@ const reducer = (store = INITIAL_STATE, action) => {
     case 'GET_AUTHLOG':
       return { ...store, authLog: action.payload };
     case 'GET_AUTHLOG_ERR':
+      return { ...store, errMessage: action.payload };
+    case 'GET_REQUEST_COUNT':
+      return { ...store, requestCount: action.payload };
+    case 'GET_REQUEST_COUNT_ERR':
+      return { ...store, errMessage: action.payload };
+    case 'GET_MAIL_LOG':
+      return { ...store, mailLog: action.payload };
+    case 'GET_MAIL_LOG_ERR':
       return { ...store, errMessage: action.payload };
     default:
       return store;

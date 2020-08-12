@@ -46,3 +46,17 @@ export const getAuthlog = () => (dispatch) => {
     .then((res) => dispatch({ type: 'GET_AUTHLOG', payload: res.data }))
     .catch((err) => dispatch({ type: 'GET_AUTHLOG_ERR', payload: err }));
 };
+
+export const getRequestcount = () => (dispatch) => {
+  axios
+    .get('../fakedata/requestHit.json')
+    .then((res) => dispatch({ type: 'GET_REQUEST_COUNT', payload: res.data }))
+    .catch((err) => dispatch({ type: 'GET_REQUEST_COUNT_ERR', payload: err }));
+};
+
+export const getMaillog = () => (dispatch) => {
+  axios
+    .get('../fakedata/mailLog.json')
+    .then((res) => dispatch({ type: 'GET_MAIL_LOG', payload: res.data }))
+    .catch((err) => dispatch({ type: 'GET_MAIL_LOG_ERR', payload: err }));
+}

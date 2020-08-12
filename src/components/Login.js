@@ -11,7 +11,7 @@ const NormalLoginForm = (props) => {
   const { isLogin, signin } = props;
   const authControl = () => {
     if (isLogin) {
-      props.history.push("/dashboard");
+      props.history.push('/dashboard');
     }
   };
 

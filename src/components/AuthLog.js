@@ -14,11 +14,7 @@ const AuthLog = (props) => {
         header={<div>Auth Log</div>}
         bordered
         dataSource={authLog}
-        renderItem={(item) => (
-          <List.Item>
-            <Typography.Text mark>[ERROR]</Typography.Text> {item}
-          </List.Item>
-        )}
+        renderItem={(item) => <List.Item>{item}</List.Item>}
       />
     </div>
   );

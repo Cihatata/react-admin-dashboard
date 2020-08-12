@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { Table, Tag } from 'antd';
 import { getUser } from '../actions';
 
@@ -41,9 +40,9 @@ const UserList = (props) => {
       title: 'Tags',
       key: 'tags',
       dataIndex: 'tags',
-      render: tags => (
+      render: (tags) => (
         <>
-          {tags.map(tag => {
+          {tags.map((tag) => {
             let color = tag.length > 5 ? 'geekblue' : 'green';
             if (tag === 'loser') {
               color = 'volcano';
@@ -63,7 +62,6 @@ const UserList = (props) => {
     <div>
       <h1> UserList </h1>
       <Table columns={columns} dataSource={userList} />
-      <Link to="/"> Ana Sayfa </Link>
     </div>
   );
 };
@@ -71,7 +69,7 @@ const UserList = (props) => {
 const mapStateToProps = (state) => {
   return {
     userList: state.userList,
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, { getUser })(UserList);

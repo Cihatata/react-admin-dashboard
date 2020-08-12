@@ -16,10 +16,7 @@ const { Header, Content, Footer } = Layout;
 const Admin = (props) => {
   const { isLogin } = props;
   useEffect(() => {
-    if (isLogin) {
-
-    } else {
-      console.log('Logine yonlendir');
+    if (!isLogin) {
       props.history.push('/login');
     }
   }, [isLogin]);
