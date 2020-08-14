@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Admin from './Admin';
-import Login from './components/Login';
+import Login from './pages/Login';
 
 const App = () => {
   return (

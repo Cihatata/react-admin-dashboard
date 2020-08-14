@@ -59,4 +59,12 @@ export const getMaillog = () => (dispatch) => {
     .get('../fakedata/mailLog.json')
     .then((res) => dispatch({ type: 'GET_MAIL_LOG', payload: res.data }))
     .catch((err) => dispatch({ type: 'GET_MAIL_LOG_ERR', payload: err }));
-}
+};
+
+export const getThreats = () => async (dispatch) => {
+  await axios
+    .get('../fakedata/threats.json')
+    .then((res) => res.data)
+    .then((res) => dispatch({ type: 'GET_THREATS', payload: res.urls }))
+    .catch((err) => dispatch({ type: 'GET_THREATS', payload: err }));
+};

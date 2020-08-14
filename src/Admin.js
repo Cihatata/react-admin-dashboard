@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
 
-import Dashboard from './components/Dashnoard';
-import UserList from './components/UserList';
+import Dashboard from './pages/Dashnoard';
+import UserList from './pages/UserList';
 import SideMenu from './components/SideMenu';
 import BreadcrumbMe from './components/BreadcrumbMe';
 import HeaderMe from './components/HeaderMe';
-import ErrorLog from './components/ErrorLog';
-import AuthLog from './components/AuthLog';
+import ErrorLog from './pages/ErrorLog';
+import AuthLog from './pages/AuthLog';
+import Threats from './pages/Theats';
 
 const { Header, Content, Footer } = Layout;
 
@@ -36,6 +37,7 @@ const Admin = (props) => {
             <div style={{ padding: 24, minHeight: 560, margin: '16px 0' }}>
               <Route exact path="/dashboard" component={Dashboard} />
               <Route path="/userlist" component={UserList} />
+              <Route path="/threats" component={Threats} />
               <Route path="/logs/errorlog" component={ErrorLog} />
               <Route path="/logs/authlog" component={AuthLog} />
             </div>

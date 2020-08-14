@@ -26,6 +26,9 @@ const SideMenu = ({ testFunc }) => {
         <Menu.Item key="1" icon={<PieChartOutlined />}>
           <Link to="/dashboard">Dashboard</Link>
         </Menu.Item>
+        <Menu.Item key="6" icon={<PieChartOutlined />}>
+          <Link to="/threats">Threats</Link>
+        </Menu.Item>
         <Menu.Item key="2" icon={<UserOutlined />}>
           <Link to="/userlist">UserList</Link>
         </Menu.Item>

@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   authLog: [],
   requestCount: [],
   mailLog: [],
+  urls: [],
 };
 
 const reducer = (store = INITIAL_STATE, action) => {
@@ -40,6 +41,10 @@ const reducer = (store = INITIAL_STATE, action) => {
     case 'GET_MAIL_LOG':
       return { ...store, mailLog: action.payload };
     case 'GET_MAIL_LOG_ERR':
+      return { ...store, errMessage: action.payload };
+    case 'GET_THREATS':
+      return { ...store, urls: action.payload };
+    case 'GET_THREATS_ERR':
       return { ...store, errMessage: action.payload };
     default:
       return store;
