@@ -11,7 +11,10 @@ const Threats = (props) => {
   useEffect(() => {
     // #Issue Birden fazla istek gidiyor
     getThreats();
-  }, [filterUrls]);
+  }, []);
+  useEffect(() => {
+    setFilterUrls(urls);
+  }, [urls]);
   const arrFilter = (value, event) => {
     const { name } = event.target;
     filterUrls = urls.filter((url) => url[name].includes(value));
