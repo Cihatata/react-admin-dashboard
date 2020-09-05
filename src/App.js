@@ -11,7 +11,6 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/" component={Admin} />
       </Switch>
-      {/* {!isLogin ? <Login /> : <Admin />} */}
     </Router>
   );
 };
